@@ -70,9 +70,9 @@ create table if not exists change_requests (
   title text not null,
   method text not null check (method in ('FP', 'RCA', 'PDCA')),
   plan text,
-  do text,
-  check text,
-  act text,
+  do_step text,
+  check_step text,
+  act_step text,
   risk text,
   status text not null default 'OPEN' check (status in ('OPEN', 'IN_PROGRESS', 'DONE', 'REJECTED'))
 );
